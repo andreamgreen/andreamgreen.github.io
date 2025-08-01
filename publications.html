@@ -1,8 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Page Title</title>
+  <title>Publications - Andrea M. Green</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .pub {
+      border-bottom: 1px solid #ccc;
+      padding: 15px 0;
+    }
+
+    .pub-title {
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .pub-authors {
+      font-style: italic;
+      margin-top: 3px;
+    }
+
+    .pub-links a, .toggle-abstract {
+      margin-right: 10px;
+      text-decoration: none;
+      color: #0077cc;
+      font-size: 0.9em;
+    }
+
+    .abstract {
+      display: none;
+      margin-top: 8px;
+      color: #444;
+    }
+
+    .toggle-abstract {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .toggle-abstract:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -12,10 +52,73 @@
     <a href="outreach.html">Outreach</a>
     <a href="interests.html">Other Interests</a>
   </nav>
+
   <div class="container">
-    <h1>Page Title</h1>
-    <p>This is the content for the page.</p>
+    <h1>Selected Publications</h1>
+
+    <!-- Publication 1 -->
+    <div class="pub">
+      <div class="pub-title">
+        Black Older Adults' Perception of Using Voice Assistants to Enact a Medical Recovery Curriculum
+      </div>
+      <div class="pub-authors">
+        A. Green, G. Polite, I. Hung, K. Fessele, S.L. Billington, J.A. Landay, A. Cuadra  
+        <br><em>Proceedings of the ACM on Human-Computer Interaction, 9(2), 1–35, 2024</em>
+      </div>
+      <div class="pub-links">
+        <a href="#" target="_blank">[PDF]</a>
+        <a href="#" target="_blank">[Project]</a>
+        <button class="toggle-abstract" onclick="toggleAbstract(this)">Show abstract</button>
+      </div>
+      <div class="abstract">
+        This paper investigates how Black older adults perceive and interact with voice assistants to support a medical recovery process. Through qualitative methods and participatory design, the study identifies trust, cultural relevance, and usability as key factors in designing inclusive health tech tools.
+      </div>
+    </div>
+
+    <!-- Publication 2 -->
+    <div class="pub">
+      <div class="pub-title">
+        Impact of Sustainable Retrofitting on Resident Wellbeing: A Critical Review
+      </div>
+      <div class="pub-authors">
+        J.F. Xu, A. Green, S. Jain, D. Chan, S.L. Billington  
+        <br><em>Building and Environment, 2023</em>
+      </div>
+      <div class="pub-links">
+        <a href="#" target="_blank">[Publisher]</a>
+        <button class="toggle-abstract" onclick="toggleAbstract(this)">Show abstract</button>
+      </div>
+      <div class="abstract">
+        This review synthesizes existing literature on how sustainable building retrofits influence occupant health and wellbeing. It reveals significant gaps in post-retrofit evaluation and proposes a framework for holistic impact assessment.
+      </div>
+    </div>
+
+    <!-- Publication 3 -->
+    <div class="pub">
+      <div class="pub-title">
+        A Human-Centered Perspective on Optimizing Ambient Assisted Living Sensing Systems for Aging in Place
+      </div>
+      <div class="pub-authors">
+        A. Green, A. Cuadra, S.L. Billington, Y. Dong  
+        <br><em>Manuscript in preparation, 2024</em>
+      </div>
+      <div class="pub-links">
+        <button class="toggle-abstract" onclick="toggleAbstract(this)">Show abstract</button>
+      </div>
+      <div class="abstract">
+        This work explores design tradeoffs in sensing systems intended for aging-in-place environments, emphasizing user-centered considerations like privacy, control, and adaptability across diverse populations of older adults.
+      </div>
+    </div>
+
   </div>
+
+  <script>
+    function toggleAbstract(btn) {
+      const abs = btn.parentElement.nextElementSibling;
+      const isVisible = abs.style.display === 'block';
+      abs.style.display = isVisible ? 'none' : 'block';
+      btn.textContent = isVisible ? 'Show abstract' : 'Hide abstract';
+    }
+  </script>
 </body>
 </html>
-
